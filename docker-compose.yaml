@@ -32,4 +32,3 @@ volumes:
   mongo-data:
 networks:
   mern-network:
-    external: true
