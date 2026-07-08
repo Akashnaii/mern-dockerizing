@@ -2,12 +2,12 @@ FROM node:18.9.1
 
 WORKDIR /app
 
-COPY package.json .
+COPY package*.json ./
 
-RUN npm update && npm install
+RUN npm ci
 
 COPY . .
- 
+
 EXPOSE 5173
 
 CMD ["npm","run","dev"]

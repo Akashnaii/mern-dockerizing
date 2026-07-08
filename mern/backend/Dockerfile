@@ -2,14 +2,16 @@ FROM node:18.9.1
 
 WORKDIR /app
 
-COPY package.json .
+COPY package*.json ./
 
-RUN npm update && npm install
+RUN npm ci
 
 COPY . .
 
+CMD ["npm","run","dev"]
+
+
 EXPOSE 5050
 
-CMD ["npm","start"]
 
 # simple Dockerfile for backend
