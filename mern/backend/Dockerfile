@@ -11,7 +11,7 @@ COPY . .
 CMD ["npm","start"]
 
 
-EXPOSE 5050
+EXPOSE 4000
 
 
 # simple Dockerfile for backend
